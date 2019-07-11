@@ -10,6 +10,7 @@ install_for_centos() {
         | awk -F '"' '$2~/^git-[0-9]+.*.tar.xz$/{print $2}' \
         | sort -Vr \
         | head -n 1 )"
+
     ( set -x
     wget "https://mirrors.edge.kernel.org/pub/software/scm/git/$file"
     )
