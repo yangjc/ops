@@ -7,7 +7,9 @@ install_for_centos() {
 
     cd /tmp
     file="$(curl -s 'https://mirrors.edge.kernel.org/pub/software/scm/git/' \
-        | awk -F '"' '$2~/^git-[0-9].*.tar.xz$/{x=$2}END{print x}')"
+        | awk -F '"' '$2~/^git-[0-9]+.*.tar.xz$/{print $2}' \
+        | sort -Vr \
+        | head -n 1 )"
     ( set -x
     wget "https://mirrors.edge.kernel.org/pub/software/scm/git/$file"
     )
