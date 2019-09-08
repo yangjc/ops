@@ -16,7 +16,7 @@ else
     echo ". proxy-on" >&2
 fi
 EOF
-    chmod +x /usr/local/bin/proxy-on
+    chmod +x /usr/local/sbin/proxy-on
 
     cat <<EOF > /usr/local/sbin/proxy-off
 #!/bin/bash
@@ -31,7 +31,7 @@ else
     echo ". proxy-off" >&2
 fi
 EOF
-    chmod +x /usr/local/bin/proxy-off
+    chmod +x /usr/local/sbin/proxy-off
 }
 # _run proxy-url
 _run "" )
