@@ -3,7 +3,7 @@
 ( _run() {
     _url="$1"
 
-    cat <<EOF > /usr/local/bin/proxy-on
+    cat <<EOF > /usr/local/sbin/proxy-on
 #!/bin/bash
 if [ "\$0" == "-bash" ]; then
     export http_proxy="$_url"
@@ -18,7 +18,7 @@ fi
 EOF
     chmod +x /usr/local/bin/proxy-on
 
-    cat <<EOF > /usr/local/bin/proxy-off
+    cat <<EOF > /usr/local/sbin/proxy-off
 #!/bin/bash
 if [ "\$0" == "-bash" ]; then
     export http_proxy=
