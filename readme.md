@@ -1,4 +1,5 @@
 # Ops
 
-Part of [DevOps](https://en.wikipedia.org/wiki/DevOps), including deployment tools.
+**DEPRECATED**. Use `makelib` instead.
 
+~~Part of [DevOps](https://en.wikipedia.org/wiki/DevOps).~~
